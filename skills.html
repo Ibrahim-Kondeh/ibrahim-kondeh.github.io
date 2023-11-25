@@ -71,6 +71,20 @@
     <!-- Footer content -->
     &copy; 2023 Ibrahim Kondeh
   </footer>
+   <script>
+    // Function to toggle visibility of skills content
+    function toggleSkills() {
+      const skillsContent = document.getElementById('skillsContent');
+      if (skillsContent.style.display === 'block') {
+        skillsContent.style.display = 'none';
+      } else {
+        skillsContent.style.display = 'block';
+      }
+    }
+
+    // Attach the click event to the skills title
+    document.getElementById('skillsTitle').addEventListener('click', toggleSkills);
+  </script>
 
   <!-- Bootstrap & Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
