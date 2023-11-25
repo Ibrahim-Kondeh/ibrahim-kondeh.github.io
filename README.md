@@ -1,1 +1,0 @@
-# ibrahim-kondeh.github.io
