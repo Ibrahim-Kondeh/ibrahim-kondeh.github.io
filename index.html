@@ -68,6 +68,28 @@
   <!-- Bootstrap & Scripts -->
   <!-- Include Bootstrap JS scripts here -->
   <script>
+  // Typewriter effect function
+  function typeWriter(text, i, fnCallback) {
+    if (i < text.length) {
+      document.querySelector("h1").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(function() {
+        typeWriter(text, i, fnCallback)
+      }, 100);
+    } else if (typeof fnCallback == "function") {
+      setTimeout(fnCallback, 1000);
+    }
+  }
+
+  // Start the typewriter effect when the window loads
+  window.onload = function() {
+    var text = "Welcome to Ibrahim Kondeh's Portfolio!";
+    typeWriter(text, 0, function() {
+      console.log("Typing effect completed!");
+    });
+  };
+</script>
+  <script>
   // Function to display an alert when the page finishes loading
   window.onload = function() {
     alert('Welcome to Ibrahim Kondeh\'s Portfolio!');
